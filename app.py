@@ -127,8 +127,12 @@ def add_hero():
 
 @app.route('/delete/<id>', methods=['GET'])
 def delete_hero(id):
-    #Transformar el id (string) a un objectId
     try:
+        #Obtener nombres de las imagenes para eliminarlas del servidor
+        images = db.heroes.find_one({'_id': ObjectId(id)}, {'images': 1, '_id': 0})
+        for name_img in images['images']:
+            os.remove(os.path.join(app.config['IMG_FOLDER'], name_img))
+        #Eliminar heroe de la bd
         db.heroes.delete_one({'_id': ObjectId(id)})
         flash('Hero deleted successfully!')
         return redirect(url_for('get_heroes'))
@@ -234,4 +238,4 @@ def not_found(error=None):
 
 
 if __name__ == "__main__":
-    app.run(host='localhost', port='5000', debug=True)
+    app.run(host='src', port='5000', debug=True)
