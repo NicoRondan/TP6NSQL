@@ -2,9 +2,13 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify, R
 from bson import json_util
 from bson.objectid import ObjectId
 from db import connect_db, initialize
+import os 
 
 
 app = Flask(__name__)
+
+"""Declarar directorio de subida de imagenes"""
+app.config['IMG_FOLDER'] = './static/img'
 
 """Clave necesaria para poder utilizar flash"""
 app.secret_key = 'clave_secreta'
@@ -12,7 +16,7 @@ app.secret_key = 'clave_secreta'
 #Conexion a la bd
 db = connect_db()
 
-#Reiniciar bd
+#Borrar coleccion
 #db.heroes.drop()
 
 #Checkear que haya datos en la bd
@@ -25,7 +29,7 @@ if "heroes" not in collist:
 @app.route('/', methods=['GET'])
 def get_heroes():
     #Obtener heroes de ambas casas
-    data = db.heroes.find()
+    data = db.heroes.find().sort('name')
     #Convertir BSON a JSON
     data = json_util.dumps(data)
     #json list
@@ -35,7 +39,7 @@ def get_heroes():
 @app.route('/marvel', methods=['GET'])
 def get_heroes_marvel():
     #Obtener heroes de marvel
-    data = db.heroes.find({"house": "MARVEL"})
+    data = db.heroes.find({"house": "MARVEL"}).sort('name')
     data = json_util.dumps(data)
     data = json_util.loads(data)
     return render_template('home.html', data=data)  
@@ -43,66 +47,82 @@ def get_heroes_marvel():
 @app.route('/dc', methods=['GET'])
 def get_heroes_dc():
     #Obtener heroes de dc
-    data = db.heroes.find({"house": "DC"})
+    data = db.heroes.find({"house": "DC"}).sort('name')
     data = json_util.dumps(data)
     data = json_util.loads(data)
     return render_template('home.html', data=data)  
 
 @app.route('/add-hero', methods=['POST', 'GET'])
 def add_hero():
-    #Recibiendo datos
-    name = request.json['name']
-    character = request.json['character']
-    year = request.json['year']
-    house = request.json['house']
-    biography = request.json['biography']
-    equipment = request.json['equipment']
-    images = request.json['images']
-    
-    if name and year and biography and house and images:
- 
-        if character == '' and equipment == '':
-            hero = {
-                    "name": name,
-                    "year": year,
-                    "house": house,
-                    "biography": biography,
-                    "images": images
-                }
-        elif character == '':
-            hero = {
-                    "name": name,
-                    "year": year,
-                    "house": house,
-                    "biography": biography,
-                    "equipment": equipment,
-                    "images": images
-                }
-        elif equipment == '':
-            hero = {
-                    "name": name,
-                    "character": character,
-                    "year": year,
-                    "house": house,
-                    "biography": biography,
-                    "images": images
-                }
-        else:
-            hero = {
-                    "name": name,
-                    "character": character,
-                    "year": year,
-                    "house": house,
-                    "biography": biography,
-                    "equipment": equipment,
-                    "images": images
-                }
-        #Insertar objeto
-        try:
-            id = db.heroes.insert_one(hero)
-            return str(id)
-        except Exception as err:
-            print("An exception occurred :", err)
+    if request.method == 'GET':
+        return render_template('add.html')
+    else:
+        #Recibiendo datos
+        name = request.form.get('name')
+        character = request.form.get('character')
+        year = request.form.get('year')
+        house = request.form.get('house')
+        biography = request.form.get('biography')
+        equipment = request.form.get('equipment')
+        images = []
+        
+        # Guardar cada imagen en el servidor
+        for file in request.files.getlist('images'):
+            #Almacenar el nombre del archivo
+            images.append(file.filename)
+            file.save(os.path.join(app.config['IMG_FOLDER'], file.filename))   
+                       
+        if name and year and biography and house and images:
+            
+            if (character == None or character == '') and (equipment == None or equipment == ''):
+                hero = {
+                        "name": name,
+                        "year": year,
+                        "house": house,
+                        "biography": biography,
+                        "images": images,
+                        "limit_images": len(images)
+                    }
+            elif (character == None or character == ''):
+                hero = {
+                        "name": name,
+                        "year": year,
+                        "house": house,
+                        "biography": biography,
+                        "equipment": equipment,
+                        "images": images,
+                        "limit_images": len(images)
+                    }
+            elif (equipment == None or equipment == ''):
+                hero = {
+                        "name": name,
+                        "character": character,
+                        "year": year,
+                        "house": house,
+                        "biography": biography,
+                        "images": images,
+                        "limit_images": len(images)
+                    }
+            else:
+                hero = {
+                        "name": name,
+                        "character": character,
+                        "year": year,
+                        "house": house,
+                        "biography": biography,
+                        "equipment": equipment,
+                        "images": images,
+                        "limit_images": len(images)
+                    }
+            #Insertar objeto
+            try:
+                db.heroes.insert_one(hero)
+                flash('Hero added successfully!')
+                return redirect(url_for('get_heroes'))
+            except Exception as err:
+                print("An exception occurred :", err)
+                flash('An error has occurred...')
+                redirect('/add-hero')
 
 
 @app.route('/delete/<id>', methods=['GET'])

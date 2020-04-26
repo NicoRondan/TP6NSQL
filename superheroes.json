@@ -6,9 +6,9 @@
         "house" : "MARVEL",
         "year" : 1962,
         "images" : [ 
-            "hulk1.png", 
-            "hulk2.png", 
-            "hulk3.png"
+            "hulk1.jpg", 
+            "hulk2.jpg", 
+            "hulk3.jpg"
         ],
         "limit_images": 3
     },   
@@ -19,7 +19,7 @@
         "house" : "MARVEL",
         "year" : 1962,
         "images" : [ 
-            "ant_man1.png", 
+            "ant_man1.jpg", 
             "ant_man2.png"
         ],
         "limit_images": 2
@@ -32,7 +32,7 @@
         "year" : 1962,
         "images" : [ 
             "thor1.png", 
-            "thor2.png", 
+            "thor2.jpg", 
             "thor3.png"
         ],
         "limit_images": 3,
@@ -45,7 +45,7 @@
         "house" : "MARVEL",
         "year" : 1941,
         "images" : [ 
-            "red_skull1.png"
+            "red_skull1.jpg"
         ],
         "limit_images": 1
     },
@@ -58,7 +58,7 @@
         "images" : [  
             "iron_man1.png", 
             "iron_man2.png", 
-            "iron_man3.png"
+            "iron_man3.jpg"
         ],
         "limit_images": 3,
         "equipment" : "Mark Armor"
@@ -70,7 +70,7 @@
         "house" : "MARVEL",
         "year" : 1975,
         "images" : [ 
-            "gamora1.png", 
+            "gamora1.jpg", 
             "gamora2.png"
         ],
         "limit_images": 2
@@ -109,7 +109,7 @@
         "house" : "MARVEL",
         "year" : 1976,
         "images" : [ 
-            "rocket_racoon1.png"
+            "rocket_racoon1.jpg"
         ],
         "limit_images": 1
     },
@@ -120,7 +120,7 @@
         "house" : "DC",
         "year" : 1940,
         "images" : [ 
-            "robin1.png"
+            "robin1.jpg"
         ],
         "limit_images": 1
     },
@@ -152,7 +152,7 @@
         "biography" : "El Linaje De Los Hudson, Una Antigua Y Honorable Familia De Canadá, Desciende De Una Sub-Raza Humana Evolucionada A Partir De Los Lobos, Conocidos Como Los Lupinos. El Supremo Líder De Los Lupinos, Conocido Sólo Como Romulus, Mostró Un Muy Particular Interés Por James, El Descendiente Más Joven Del Matrimonio Formado Por Elizabeth Hudson Y John Howlett, Manipulando Su Vida De Diversas Formas Desde Su Nacimiento.\r\n\r\nJames Howlett Nació En Alberta, Canadá, En El Siglo Xix. Segundo Hijo De Elizabeth Hudson Y John Howlett. James Nació Enfermo Y Débil. Su Madre Se Encontraba Abstraída Y Distante Tras La Muerte De Su Primer Hijo Llamado John, Bajo Circunstancias Desconocidas. James Fue Un Niño Enfermizo Y Además Padecía Asma, Por Lo Que Siempre Estaba Bajo El Cuidado De Una Joven Llamada Rose Hopkins, Contratada Por Los Howlett Específicamente Para Que Lo Cuidara Y Mantuviera Contento.\r\n\r\nRose Y James Pasaban El Tiempo Jugando Con Otro Chico Apodado \"Dog\", Hijo Del Cruel Thomas Logan, Guardián De Los Terrenos De La Mansión De Los Howlett. Pero Las Cosas Se Empezaron A Complicar Cuando John Howlett Despide A Thomas De Su Casa Tras Un Incidente. Entonces Thomas Y Su Hijo Irrumpen En La Casa De Los Howlett. En Ese Momento, Thomas Logan Da A Entender Que Tenía Un Romance Con Elizabeth A Espaldas De John Howlett (Esto, Sumado Al Asombroso Parecido Físico Que Luego Desarrollaría James, Da A Entender Que Thomas Logan Es, En Realidad, El Verdadero Padre De James) Y Asesina A John. El Pequeño James, Lleno De Ira, Manifiesta Por Primera Vez Sus Habilidades Mutantes, Incluyendo Sus Garras De Hueso. Él Mata A Thomas Y Hiere De Gravedad A Dog En El Rostro. Al Ver El Grotesco Desenlace, Elizabeth Se Suicida De Un Disparo De Escopeta. Cuando James Se Recupera Del Trance De Ira En El Que Entró, No Puede Recordar Nada De Lo Sucedido.\r\n\r\nJames Decide Huir De Su Hogar Junto A Rose. El Abuelo Del Joven James Le Entrega Una Fuerte Cantidad De Dinero A Rose A Cambio De Que Se Vayan Para Siempre De La Propiedad. James Y Rose Terminan Viviendo En Un Campamento De Mineros En La Región Del Yukón En Canadá. Allí James Crece Enamorado De Rose Aunque Sabe Que Ella Sólo Lo Ve Como Su Hermano. Esta Acabará Casándose Con El Capataz De La Mina, Quien Era Muy Respetado Por James.\r\n\r\nAños Después, El Abuelo De James Contacta A Dog Pidiéndole Que Localice A Su Nieto Y A Rose Pues Está Arrepentido De Lo Que Les Hizo Y Antes De Morir Quiere Pedirles Perdón. Obviamente Dog Desarrolló Una Gran Aversión Hacia Ellos. Al Encontrarlos, Dog Ataca A James. Rose Aparece Corriendo Para Intentar Calmarlos Pero Tropieza Y James Termina Acuchillándola Con Sus Re-Descubiertas Garras De Hueso.\r\n\r\nJames Pasa Por Un Periodo De Crisis Después De La Muerte De Rose. El Trance Lo Hace Olvidar Todo Su Pasado, Incluyendo Su Nombre. El Único Nombre Que Recuerda Es El De \"Logan\", Que A Partir De Entonces Comienza A Utilizar Asumiendo Que Es El Suyo. James Vivirá Durante Un Tiempo En El Bosque, En Medio De Lobos En La Zona Del Yukón.",
         "house" : "MARVEL",
         "images" : [ 
-            "wolverine1.png", 
+            "wolverine1.jpg", 
             "wolverine2.png"
         ],
         "limit_images": 2,
@@ -201,7 +201,7 @@
         "house" : "MARVEL",
         "images" : [ 
             "invisible_woman1.png", 
-            "invisible_woman2.png"
+            "invisible_woman2.jpg"
         ],
         "limit_images": 2,
         "year" : 1961
@@ -212,7 +212,7 @@
         "biography" : "Creado En 1941 Por El Escritor Y Editor Mort Weisinger Y El Artista George Papp, Quien Se Quedó Con La Serie De Casi Veinte Años, Flecha Verde Y Speedy Aparecieron Por Primera Vez En More Fun Comics Número 73 (Noviembre De 1941).\r\n\r\nFlecha Verde También Se Creó Con Temas De La Versión Anterior Del Personaje De Batman, Con Lo Que Varias Similitudes Entre Los Dos Personajes Son Observables, Sobre Todo En La Encarnación Anterior De Flecha Verde. Flecha Verde Tuvo Un Adolescente Llamado Speedy Como Compañero, Así Como Batman Tuvo A Robin; Flecha Verde Y Batman Fueron O Son Dos Playboys Millonarios Con Identidades Secretas; Flecha Verde Tenía Un Flechamóvil Y Un Flechaplano Similar Al Batmóvil Y El Batplano; Flecha Verde Tuvo La Flechacueva Mientras Batman Tuvo La Batcueva; Flecha Verde Fue Convocado Por La Señal De La Flecha, Al Igual Que Batman Es Llamado A La Jefatura De Policía Por La Bat-Señal; En Las Historias De La Edad De Oro, En La Historieta Flecha Verde Había Un Payaso Como Archienemigo Llamado Blanco, Que Era Una Versión Poco Encubierta Del Archienemigo De Batman, El Joker. Algunas De Estas Semejanzas Se Han Explicado Dentro Del Universo Fantástico De Dc Como Inspirada Por Una Reunión Entre Flecha Verde Y Batman Al Inicio De Sus Respectivas Carreras, Después De Que Flecha Verde Miró Hacia Batman Como Una Fuente De Inspiración.\r\n\r\nAparte De Las Obvias Alusiones A Robin Hood, El Personaje Flecha Verde Fue Inspirado Por Unas Pocas Diferentes Fuentes, Incluida La Novela De Edgar Wallace El Arquero Verde (1940) Y De La Serie De Columbia Pictures Del Mismo Nombre Basado En La Novela, Y Fawcett Publicaciones Anteriores Temas De Héroes Con Arco Como Flecha Dorada. Un Centauro Arquero Héroe Llamado Simplemente Flecha Precedió A Todos Estos Personajes. El Flechamóvil De Flecha Verde Fue De Color Amarillo Y Con Forma Que Recuerda Al Vehículo Que Obtuvo La Marca De Velocidad En Tierra De 1929, El Británico Flecha Dorada. Además, El Nombre De Oliver Queen Probablemente Se Refiriere A Ellery Queen, Un Detective De Ficción Popular De La Época.",
         "house" : "DC",
         "images" : [ 
-            "green_arrow1.png"
+            "green_arrow1.jpg"
         ],
         "limit_images": 1,
         "year" : 1941
@@ -224,7 +224,7 @@
         "house" : "DC",
         "images" : [ 
             "green_lantern1.png", 
-            "green_lantern2.png"
+            "green_lantern2.jpg"
         ],
         "limit_images": 2,
         "equipment" : "Power Ring",
@@ -283,8 +283,8 @@
         "year" : 1941,
         "images" : [ 
             "captain_america1.png", 
-            "captain_america2.png", 
-            "captain_america3.png"
+            "captain_america2.jpg", 
+            "captain_america3.jpg"
         ],
         "limit_images": 3
     },
@@ -340,7 +340,7 @@
         "equipment" : " Levitation Cloak",
         "year" : 1963,
         "images" : [ 
-            "doctor_strange1.png"
+            "doctor_strange1.jpg"
         ],
         "limit_images": 1
     },
@@ -351,7 +351,7 @@
         "house" : "MARVEL",
         "year" : 1973,
         "images" : [ 
-            "drax1.png"
+            "drax1.jpg"
         ],
         "limit_images": 1
     },
@@ -386,7 +386,7 @@
         "house" : "DC",
         "year" : 1940,
         "images" : [ 
-            "flash1.png"
+            "flash1.jpg"
         ],
         "limit_images": 1
     },
@@ -419,7 +419,7 @@
         "house" : "MARVEL",
         "year" : 1964,
         "images" : [ 
-            "hawkeye1.png"
+            "hawkeye1.jpg"
         ],
         "limit_images": 1
     },
@@ -463,8 +463,8 @@
         "house" : "MARVEL",
         "year" : 1949,
         "images" : [ 
-            "loki1.png", 
-            "loki2.png"
+            "loki1.jpg", 
+            "loki2.jpg"
         ],
         "limit_images": 2
     }
